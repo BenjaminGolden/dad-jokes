@@ -1,31 +1,29 @@
-import { getDadJokes } from "./data/DataManager.js"
-import { jokesList } from "feed/jokelist.js"
+// import { getDadJokes } from "./data/DataManager.js"
+// //import { jokesList } from "./feed/jokelist.js"
 
-/**
- * Main logic module for what should happen on initial page load for DadJokes
- */
+// const showDadJokes = () => {
+//     const jokeElement = document.querySelector(".jokeList");
+//     getDadJokes().then((allJokes)=> {
+//         jokeElement.innerHTML = jokesList(allJokes);
+//     })
+// }
 
-//Get a reference to the location on the DOM where the app will display
+// const startDadJokes = () => {
+	
+//     return showDadJokes;
+// }
+// startDadJokes();
 
-// let navElement = document.querySelector("nav");
-// let entryElement = document.querySelector(".entryForm")
+const getDadJokes = () => {
 
-
-const showDadJokes = () => {
-    const jokeElement = document.querySelector(".jokeList");
-    getDadJokes().then((allJokes)=> {
-        jokeElement.innerHTML = jokesList(allJokes);
+    return fetch ("https://icanhazdadjoke.com",{
+        method:"GET",
+        headers: {
+            "Accept": "application/json"
+        }
     })
 }
-/*
-    This function performs one, specific task.
+console.log(getDadJokes);
+getDadJokes();
 
-    1. Can you explain what that task is?
-    2. Are you defining the function here or invoking it?
-*/
-const startDadJokes = () => {
-	// jokeElement.innerHTML = ""
-    showDadJokes;
-}
-// Are you defining the function here or invoking it?
-startDadJokes();
+const applicationElement = document.querySelector("main");

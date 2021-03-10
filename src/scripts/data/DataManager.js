@@ -1,9 +1,10 @@
-export const getDadJokes = () => {
+// export const getDadJokes = () => {
 
-    return fetch("http://localhost:8088/dadJokes")
-    .then(response => response.json())
-    .then(parsedResponse => {
-        // do something with response here
-        return parsedResponse;
-    })
-}
+//     return fetch ("https://icanhazdadjoke.com",{
+//         method:"GET",
+//         headers: {
+//             "Accept": "application/json"
+//         }
+//     })
+// }
+// console.log(getDadJokes);
